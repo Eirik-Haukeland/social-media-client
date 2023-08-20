@@ -1,3 +1,7 @@
+[![check if brash is formatted correctly](https://github.com/Eirik-Haukeland/social-media-client/actions/workflows/format-check.yaml/badge.svg)](https://github.com/Eirik-Haukeland/social-media-client/actions/workflows/format-check.yaml)
+[![check if brash passes end to end tests](https://github.com/Eirik-Haukeland/social-media-client/actions/workflows/e2e-test.yml/badge.svg)](https://github.com/Eirik-Haukeland/social-media-client/actions/workflows/e2e-test.yml)
+[![check if brash passes unit testing](https://github.com/Eirik-Haukeland/social-media-client/actions/workflows/unit-test.yml/badge.svg)](https://github.com/Eirik-Haukeland/social-media-client/actions/workflows/unit-test.yml)
+
 # [README: Semester project 1](https://github.com/Eirik-Haukeland/social-media-client)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
