@@ -12,7 +12,7 @@
 
 export const load = (key) => {
   try {
-    returnON.parse(localStorage.getItem(key));
+    return JSON.parse(localStorage.getItem(key));
   } catch (e) {
     // todo remove (e)
     return null;

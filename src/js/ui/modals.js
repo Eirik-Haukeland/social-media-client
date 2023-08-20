@@ -16,7 +16,6 @@ export const modals = () => {
   document
     .querySelector("form#loginForm")
     .addEventListener("submit", loginListener);
-  // eslint-disable-next-line no-undef
   document
     .querySelector("form#registerForm")
     .addEventListener("submit", registerListener);
