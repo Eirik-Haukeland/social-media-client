@@ -1,0 +1,30 @@
+name: check if brash is mergeble
+
+on:
+  - push
+  - workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout pr branch
+        uses: actions/checkout@v3
+
+      - name: install node
+        uses: actions/setup-node@v2
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: check formatting
+        run: npm run lint-check
+
+      - name: run unit tests
+        run: npm run test-unit
+
+      - name: run end to end tests
+        uses: cypress-io/github-action@v4
+        with:
+          browser: electron
