@@ -11,7 +11,7 @@
     "test-unit": "jest",
     "test-e2e": "cypress open",
     "lint-check": "eslint ./src/js/* && prettier -c ./src/*",
-    "lint-fix": "eslint --fix ./src/js/* && prettier --write ./*"
+    "lint-fix": "eslint --fix ./src/js/* && prettier --write ./src/*"
   },
   "keywords": [],
   "author": "Noroff",
