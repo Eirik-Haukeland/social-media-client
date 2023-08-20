@@ -25,7 +25,6 @@ describe("auth", () => {
     const email = `${username}@stud.noroff.no`;
     const password =  'testpassword';
 
-    // todo: make make a mock of the login api to make sure of the expectedToken
     login(email, password)
 
     expect(localStorage.getItem('token')).toBe(/^Bearer [a-zA-Z0-9]*$/);
