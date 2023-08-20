@@ -10,7 +10,7 @@
     "test": "npm run test-unit && npm run test-e2e",
     "test-unit": "jest",
     "test-e2e": "cypress open",
-    "lint-check": "eslint ./src/js/* && prettier -c ./*",
+    "lint-check": "eslint ./src/js/* && prettier -c ./src/*",
     "lint-fix": "eslint --fix ./src/js/* && prettier --write ./*"
   },
   "keywords": [],
