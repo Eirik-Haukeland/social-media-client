@@ -1,5 +1,5 @@
-import router from "./router/index.js";
-import ui from "./ui/index.js";
+import router from './router/index';
+import ui from './ui/index';
 
-ui()
-router()
+ui();
+router();

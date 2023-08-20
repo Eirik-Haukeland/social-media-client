@@ -1,3 +1,3 @@
-import { templateInstance } from "../instance.js";
+import { templateInstance } from '../instance';
 
 export const postTabsTemplate = () => templateInstance('postTabs');

@@ -1,7 +1,7 @@
-import { clear } from "../tools/index.js";
+import { clear } from '../tools/index';
 
 export function renderView() {
   const main = document.querySelector('main');
-  clear(main)
+  clear(main);
   main.append(...arguments);
 }
