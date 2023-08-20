@@ -1,4 +1,4 @@
-name: check if brash is mergeble
+name: check if brash is formatted correctly
 
 on:
   - push
@@ -20,11 +20,3 @@ jobs:
 
       - name: check formatting
         run: npm run lint-check
-
-      - name: run unit tests
-        run: npm run test-unit
-
-      - name: run end to end tests
-        uses: cypress-io/github-action@v4
-        with:
-          browser: electron
