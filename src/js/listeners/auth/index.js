@@ -6,11 +6,11 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
-
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
 /* todo: remove before turn in */
 
-export * from './login';
-export * from './logout';
-export * from './register';
+export * from "./login";
+export * from "./logout";
+export * from "./register";

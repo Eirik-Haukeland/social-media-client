@@ -6,19 +6,18 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
-/* eslint-disable no-return-await */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import * as storage from '../storage/index';
+import * as storage from "../storage/index";
 
 export const headers = (contentType) => {
-  const token = storage.load('token');
+  const token = storage.load("token");
   const headers = {};
 
   if (contentType) {
-    headers['Content-Type'] = contentType;
+    headers["Content-Type"] = contentType;
   }
 
   if (token) {

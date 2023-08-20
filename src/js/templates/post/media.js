@@ -6,18 +6,20 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-export const postMedia = (post, tagName = 'a') => {
+export const postMedia = (post, tagName = "a") => {
   if (post.media) {
     const element = document.createElement(tagName);
-    element.classList.add('card-img');
+    element.classList.add("card-img");
     const img = new Image();
     img.src = post.media;
     img.alt = post.title;
-    img.classList.add('img-fluid', 'w-100');
+    img.classList.add("img-fluid", "w-100");
 
-    if (tagName.toLowerCase() === 'a') {
+    if (tagName.toLowerCase() === "a") {
       element.href = `./?view=post&postId=${post.id}`;
       element.title = `View ${post.title}`;
     }
@@ -27,5 +29,5 @@ export const postMedia = (post, tagName = 'a') => {
     return element;
   }
 
-  return '\r\n';
+  return "\r\n";
 };

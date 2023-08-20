@@ -6,12 +6,14 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { templateInstance } from '../instance';
+import { templateInstance } from "../instance";
 
 export function postFooter() {
-  const clone = templateInstance('postFooter');
-  clone.querySelector('.card-footer').append(...arguments);
+  const clone = templateInstance("postFooter");
+  clone.querySelector(".card-footer").append(...arguments);
   return clone;
 }

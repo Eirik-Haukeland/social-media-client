@@ -6,22 +6,24 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { commentsBadgeTemplate } from '../comment/badge';
-import { templateInstance } from '../instance';
-import { profileThumbnail } from '../profile/thumbnail';
-import { postTags } from './tags';
+import { commentsBadgeTemplate } from "../comment/badge";
+import { templateInstance } from "../instance";
+import { profileThumbnail } from "../profile/thumbnail";
+import { postTags } from "./tags";
 
 export const postHeader = (post) => {
-  const clone = templateInstance('postHeader');
+  const clone = templateInstance("postHeader");
 
-  clone.querySelector('.card-header').href = `./?view=post&postId=${post.id}`;
-  clone.querySelector('b').innerText = post.title;
+  clone.querySelector(".card-header").href = `./?view=post&postId=${post.id}`;
+  clone.querySelector("b").innerText = post.title;
   if (post.body) {
-    clone.querySelector('span').innerText = post.body;
+    clone.querySelector("span").innerText = post.body;
   } else {
-    clone.querySelector('span').remove();
+    clone.querySelector("span").remove();
   }
 
   const commentsBadge = commentsBadgeTemplate(post.comments);
@@ -31,7 +33,7 @@ export const postHeader = (post) => {
   if (post.author) {
     children.push(profileThumbnail(post.author));
   }
-  clone.querySelector('.card-header').append(...children);
+  clone.querySelector(".card-header").append(...children);
 
   return clone;
 };

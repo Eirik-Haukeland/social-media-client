@@ -6,11 +6,16 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-alert */
+/* eslint-disable no-return-await */
 /* todo: remove before turn in */
 
-import { followProfile } from '../../api/profiles/index';
+import { followProfile } from "../../api/profiles/index";
 
 export async function followListener(event) {
   const button = event.srcElement;
@@ -22,7 +27,7 @@ export async function followListener(event) {
       location.reload();
     } catch (e) {
       // todo remove (e)
-      return alert('There was a problem following this profile');
+      return alert("There was a problem following this profile");
     }
   }
 }

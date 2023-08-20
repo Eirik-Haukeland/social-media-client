@@ -6,13 +6,12 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
-/* eslint-disable no-return-await */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { load } from '../../storage/index';
+import { load } from "../../storage/index";
 
-export const isLoggedIn = () => Boolean(load('token'));
+export const isLoggedIn = () => Boolean(load("token"));
 
-export const profile = () => load('profile');
+export const profile = () => load("profile");

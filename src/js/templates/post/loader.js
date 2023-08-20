@@ -6,10 +6,15 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-param-reassign */
+/* eslint-disable no-alert */
+/* eslint-disable no-return-await */
 /* todo: remove before turn in */
-import { BLANK_POST } from '../../data/blank/post';
-import { postThumbnailTemplate } from './thumbnail';
+import { BLANK_POST } from "../../data/blank/post";
+import { postThumbnailTemplate } from "./thumbnail";
 
 export const postLoaderTemplate = (post = {}) => {
   post = {
@@ -18,6 +23,6 @@ export const postLoaderTemplate = (post = {}) => {
   };
 
   const thumbnail = postThumbnailTemplate(post);
-  thumbnail.querySelector('.post').classList.add('loader');
+  thumbnail.querySelector(".post").classList.add("loader");
   return thumbnail;
 };

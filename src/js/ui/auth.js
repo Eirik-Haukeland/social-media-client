@@ -6,11 +6,13 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { load } from '../storage/index';
+import { load } from "../storage/index";
 
 export function updateLoginVisibility() {
-  const token = load('token');
-  document.body.classList[token ? 'add' : 'remove']('logged-in');
+  const token = load("token");
+  document.body.classList[token ? "add" : "remove"]("logged-in");
 }

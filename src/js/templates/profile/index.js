@@ -6,11 +6,12 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
-
-export * from './button';
-export * from './page';
-export * from './following';
-export * from './followers';
-export * from './follows';
-export * from './thumbnail';
+export * from "./button";
+export * from "./page";
+export * from "./following";
+export * from "./followers";
+export * from "./follows";
+export * from "./thumbnail";

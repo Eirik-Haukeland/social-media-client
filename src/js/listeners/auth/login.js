@@ -6,19 +6,24 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-alert */
+/* eslint-disable no-return-await */
 /* todo: remove before turn in */
 
-import * as auth from '../../api/auth/index';
-import { updateLoginVisibility } from '../../ui/auth';
+import * as auth from "../../api/auth/index";
+import { updateLoginVisibility } from "../../ui/auth";
 
 export async function loginListener(event) {
   event.preventDefault();
   const form = event.target;
   const data = new FormData(form);
-  const email = data.get('email');
-  const password = data.get('password');
+  const email = data.get("email");
+  const password = data.get("password");
   try {
     const { name } = await auth.login(email, password);
     updateLoginVisibility();
@@ -26,7 +31,7 @@ export async function loginListener(event) {
   } catch (e) {
     // todo remove (e)
     return alert(
-      'Either your username was not found or your password is incorrect',
+      "Either your username was not found or your password is incorrect",
     );
   }
 }

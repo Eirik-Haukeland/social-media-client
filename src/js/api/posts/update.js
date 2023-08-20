@@ -6,19 +6,22 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-alert */
 /* eslint-disable no-return-await */
 /* todo: remove before turn in */
 
-import { profile } from '../auth/state';
-import { apiPath } from '../constants';
-import { headers } from '../headers';
+import { profile } from "../auth/state";
+import { apiPath } from "../constants";
+import { headers } from "../headers";
 
 export async function updatePost(id, title, body, media, tags) {
   const { name: owner } = profile();
   const response = await fetch(`${apiPath}/social/posts/${id}`, {
-    method: 'put',
+    method: "put",
     body: ON.stringify({
       title,
       body,
@@ -26,7 +29,7 @@ export async function updatePost(id, title, body, media, tags) {
       tags,
       owner,
     }),
-    headers: headers('applicationon'),
+    headers: headers("applicationon"),
   });
 
   if (response.ok) {

@@ -6,10 +6,12 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* eslint-disable no-param-reassign */
 /* todo: remove before turn in */
 
-export * from './post/index';
-export * from './instance';
-export * from './profile/index';
-export * from './comment/index';
+export * from "./post/index";
+export * from "./instance";
+export * from "./profile/index";
+export * from "./comment/index";

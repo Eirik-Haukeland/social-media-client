@@ -6,14 +6,13 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
-/* eslint-disable no-return-await */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { remove } from '../../storage/index';
+import { remove } from "../../storage/index";
 
 export function logout() {
-  remove('token');
-  remove('profile');
+  remove("token");
+  remove("profile");
 }

@@ -6,16 +6,18 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { loginListener, registerListener } from '../listeners/index';
+import { loginListener, registerListener } from "../listeners/index";
 
 export const modals = () => {
   document
-    .querySelector('form#loginForm')
-    .addEventListener('submit', loginListener);
+    .querySelector("form#loginForm")
+    .addEventListener("submit", loginListener);
   // eslint-disable-next-line no-undef
   document
-    .querySelector('form#registerForm')
-    .addEventListener('submit', registerListener);
+    .querySelector("form#registerForm")
+    .addEventListener("submit", registerListener);
 };

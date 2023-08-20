@@ -6,24 +6,25 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { deletePost } from '../../api/index';
-import { getSearchParams } from '../../router/searchParams';
-import { load } from '../../storage/load';
-import { templateInstance } from '../instance';
+import { deletePost } from "../../api/index";
+import { getSearchParams } from "../../router/searchParams";
+import { load } from "../../storage/load";
+import { templateInstance } from "../instance";
 
 export const postActions = (post) => {
-  const profile = load('profile');
-  const clone = templateInstance('postActions');
+  const profile = load("profile");
+  const clone = templateInstance("postActions");
   const owned = post.author && profile.name === post.author.name;
   const { postId } = getSearchParams();
   // todo postId == stuff
   const viewing = postId === post.id;
 
-  const viewButton = clone.querySelector('a[data-action=view]');
-  const deleteButton = clone.querySelector('button[data-action=delete]');
+  const viewButton = clone.querySelector("a[data-action=view]");
+  const deleteButton = clone.querySelector("button[data-action=delete]");
 
   if (viewing) {
     viewButton.remove();
@@ -32,9 +33,9 @@ export const postActions = (post) => {
   }
 
   if (owned) {
-    deleteButton.addEventListener('click', async () => {
+    deleteButton.addEventListener("click", async () => {
       await deletePost(post.id);
-      location.href = './';
+      location.href = "./";
     });
   } else {
     deleteButton.remove();

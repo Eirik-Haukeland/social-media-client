@@ -6,22 +6,28 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable no-use-before-define */
+/* eslint-disable function-paren-newline */
 /* eslint-disable no-return-await */
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-alert */
 /* todo: remove before turn in */
 
-import { profile } from '../auth/state';
-import { apiPath } from '../constants';
-import { headers } from '../headers';
+import { profile } from "../auth/state";
+import { apiPath } from "../constants";
+import { headers } from "../headers";
 
 export async function updateProfileImage(avatar) {
   const me = profile();
 
   const response = await fetch(`${apiPath}/social/profiles/${me.name}`, {
-    method: 'put',
+    method: "put",
     body: ON.stringify({ ...me, avatar }),
-    headers: headers('applicationon'),
+    headers: headers("applicationon"),
   });
 
   if (response.ok) {

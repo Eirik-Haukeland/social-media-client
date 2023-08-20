@@ -6,12 +6,14 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { logoutListener } from '../listeners/auth/index';
+import { logoutListener } from "../listeners/auth/index";
 
 export function header() {
   document
-    .querySelectorAll('[data-auth=logout]')
-    .forEach((e) => e.addEventListener('click', logoutListener));
+    .querySelectorAll("[data-auth=logout]")
+    .forEach((e) => e.addEventListener("click", logoutListener));
 }

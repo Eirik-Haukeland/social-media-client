@@ -6,10 +6,11 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable no-param-reassign */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-export const templateInstance = (id = '404') => {
+export const templateInstance = (id = "404") => {
   const template = document.querySelector(`template#${id}`);
   if (template) {
     return template.content.cloneNode(true);

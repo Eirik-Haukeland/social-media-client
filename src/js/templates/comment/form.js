@@ -6,14 +6,17 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
 /* todo: remove before turn in */
 
-import { commentListener } from '../../listeners/index';
-import { templateInstance } from '../instance';
+import { commentListener } from "../../listeners/index";
+import { templateInstance } from "../instance";
 
 export const commentFormTemplate = (postId) => {
-  const clone = templateInstance('commentForm');
-  clone.querySelector('form').dataset.postId = postId;
-  clone.querySelector('form').addEventListener('submit', commentListener);
+  const clone = templateInstance("commentForm");
+  clone.querySelector("form").dataset.postId = postId;
+  clone.querySelector("form").addEventListener("submit", commentListener);
   return clone;
 };

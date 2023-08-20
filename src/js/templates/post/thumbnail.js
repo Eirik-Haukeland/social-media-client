@@ -6,26 +6,28 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { templateInstance } from '../instance';
-import { postHeader } from './header';
-import { postMedia } from './media';
-import { postFooter } from './footer';
-import { postReactionMenu } from './reactions';
-import { postActions } from './actions';
+import { templateInstance } from "../instance";
+import { postHeader } from "./header";
+import { postMedia } from "./media";
+import { postFooter } from "./footer";
+import { postReactionMenu } from "./reactions";
+import { postActions } from "./actions";
 
 export const postThumbnailTemplate = (post, preview = false) => {
-  const clone = templateInstance('postThumbnail');
+  const clone = templateInstance("postThumbnail");
 
-  clone.querySelector('.post').id = post.id;
+  clone.querySelector(".post").id = post.id;
 
   const header = postHeader(post);
-  const media = postMedia(post, preview ? 'div' : 'a');
+  const media = postMedia(post, preview ? "div" : "a");
   const footer = postFooter(postActions(post), postReactionMenu(post));
   const children = [header, media, footer];
 
-  clone.querySelector('.thumbnail').append(...children);
+  clone.querySelector(".thumbnail").append(...children);
 
   return clone;
 };

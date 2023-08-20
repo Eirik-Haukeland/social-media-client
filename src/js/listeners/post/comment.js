@@ -6,25 +6,30 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-alert */
+/* eslint-disable no-return-await */
 /* todo: remove before turn in */
 
-import { comment } from '../../api/index';
-import { getSearchParams } from '../../router/searchParams';
+import { comment } from "../../api/index";
+import { getSearchParams } from "../../router/searchParams";
 
 export async function commentListener(event) {
   event.preventDefault();
   const form = event.target;
   const data = new FormData(form);
-  const body = data.get('body');
+  const body = data.get("body");
   const { postId } = form.dataset;
   const { replyToId } = getSearchParams();
   try {
     await comment(postId, body, replyToId);
   } catch (e) {
     // todo remove (e)
-    return alert('There was a problem posting your comment');
+    return alert("There was a problem posting your comment");
   }
 
   form.remove();

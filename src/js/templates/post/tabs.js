@@ -6,8 +6,10 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { templateInstance } from '../instance';
+import { templateInstance } from "../instance";
 
-export const postTabsTemplate = () => templateInstance('postTabs');
+export const postTabsTemplate = () => templateInstance("postTabs");

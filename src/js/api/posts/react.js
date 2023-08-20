@@ -6,20 +6,23 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
-/* eslint-disable eqeqeq */
-/* eslint-disable import/export */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-alert */
 /* eslint-disable no-return-await */
 /* todo: remove before turn in */
 
-import { apiPath } from '../constants';
-import { headers } from '../headers';
+import { apiPath } from "../constants";
+import { headers } from "../headers";
 
 export async function react(postId, symbol) {
   const response = await fetch(
     `${apiPath}/social/posts/${postId}/react/${symbol}`,
     {
       headers: headers(),
-      method: 'put',
+      method: "put",
     },
   );
 

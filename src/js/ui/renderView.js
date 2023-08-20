@@ -6,12 +6,14 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { clear } from '../tools/index';
+import { clear } from "../tools/index";
 
 export function renderView() {
-  const main = document.querySelector('main');
+  const main = document.querySelector("main");
   clear(main);
   main.append(...arguments);
 }

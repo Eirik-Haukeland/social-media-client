@@ -6,17 +6,19 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable no-shadow */
 /* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
 /* todo: remove before turn in */
 
-import { profileThumbnail } from './thumbnail';
+import { profileThumbnail } from "./thumbnail";
 
 export const profileFollowers = (profile) => {
   if (profile && profile.followers && profile.followers.length) {
-    const element = document.createElement('div');
-    element.classList.add('followers');
-    element.append('Followers', ...profile.followers.map(profileThumbnail));
+    const element = document.createElement("div");
+    element.classList.add("followers");
+    element.append("Followers", ...profile.followers.map(profileThumbnail));
     return element;
   }
 
-  return '\r\n';
+  return "\r\n";
 };
