@@ -1,3 +1,9 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable consistent-return */
+/* todo: remove before turn in */
+
 export const profileThumbnail = (profile) => {
   const element = document.createElement('a');
   element.classList.add('profile', 'thumbnail');

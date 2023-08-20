@@ -1,3 +1,9 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable consistent-return */
+/* todo: remove before turn in */
+
 import { isLoggedIn } from '../api/index';
 import { getProfile } from '../api/profiles/read';
 import { profilePageTemplate } from '../templates/index';

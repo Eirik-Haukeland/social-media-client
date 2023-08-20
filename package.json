@@ -11,7 +11,7 @@
     "test-unit": "jest",
     "test-e2e": "cypress open",
     "lint-check": "eslint ./src/js/* && prettier -c ./*",
-    "lint-fix": "eslint -fix ./src/js/* && prettier --write ./*"
+    "lint-fix": "eslint --fix ./src/js/* && prettier --write ./*"
   },
   "keywords": [],
   "author": "Noroff",
@@ -32,7 +32,7 @@
     "bootstrap-dark-5": "^1.1.3"
   },
   "lint-staged": {
-    "git src/**/*.js": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint --fix"
     ],
