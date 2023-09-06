@@ -1,3 +1,16 @@
-export * from "./load.js"
-export * from "./remove.js"
-export * from "./save.js"
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable consistent-return */
+/* eslint-disable import/no-cycle */
+/* eslint-disable prefer-rest-params */
+/* eslint-disable no-shadow */
+/* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-param-reassign */
+/* todo: remove before turn in */
+
+export * from "./load";
+export * from "./remove";
+export * from "./save";

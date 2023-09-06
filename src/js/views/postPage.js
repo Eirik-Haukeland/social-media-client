@@ -1,21 +1,37 @@
-import { getPost, isLoggedIn, profile } from "../api/index.js"
-import { postFormTemplate, postTabsTemplate, postThumbnailTemplate } from "../templates/index.js";
-import { postCommentsTemplate } from "../templates/post/comments.js";
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable consistent-return */
+/* eslint-disable import/no-cycle */
+/* eslint-disable prefer-rest-params */
+/* eslint-disable no-shadow */
+/* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* todo: remove before turn in */
+
+import { getPost, isLoggedIn, profile } from "../api/index";
+import {
+  postFormTemplate,
+  postTabsTemplate,
+  postThumbnailTemplate,
+} from "../templates/index";
+import { postCommentsTemplate } from "../templates/post/comments";
 
 export const publicPostPage = async (post) => {
   const element = document.createElement("div");
   element.classList.add("post", "page", "mb-3");
-  const thumbnail = postThumbnailTemplate(post, true)
-  const comments = postCommentsTemplate(post)
-  element.append(thumbnail, comments)
-  return element
-}
+  const thumbnail = postThumbnailTemplate(post, true);
+  const comments = postCommentsTemplate(post);
+  element.append(thumbnail, comments);
+  return element;
+};
 
 export const postPage = async (postId) => {
   if (!isLoggedIn()) {
-    location.href = "./"
+    location.href = "./";
   } else {
-    const me = profile()
+    const me = profile();
 
     if (postId) {
       const post = await getPost(postId);
@@ -25,15 +41,15 @@ export const postPage = async (postId) => {
         const page = postTabsTemplate();
         const thumbnail = postThumbnailTemplate(post);
         const postForm = postFormTemplate(post);
-        const comments = postCommentsTemplate(post)
-        page.querySelector('#nav-default').append(thumbnail, comments);
-        page.querySelector('#nav-edit').append(postForm);
-        return page
+        const comments = postCommentsTemplate(post);
+        page.querySelector("#nav-default").append(thumbnail, comments);
+        page.querySelector("#nav-edit").append(postForm);
+        return page;
       }
 
-      return publicPostPage(post)
+      return publicPostPage(post);
     }
 
-    return postFormTemplate()
+    return postFormTemplate();
   }
-}
+};

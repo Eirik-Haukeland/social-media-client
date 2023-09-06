@@ -1,7 +1,22 @@
-import { createPost, updatePost } from "../../api/index.js"
-import { clear } from "../../tools/clear.js";
-import { templateInstance } from "../instance.js";
-import { postThumbnailTemplate } from "./thumbnail.js";
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable consistent-return */
+/* eslint-disable import/no-cycle */
+/* eslint-disable prefer-rest-params */
+/* eslint-disable no-shadow */
+/* eslint-disable import/named */
+/* eslint-disable quotes */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-alert */
+/* eslint-disable no-return-await */
+/* todo: remove before turn in */
+import { createPost, updatePost } from "../../api/index";
+import { clear } from "../../tools/clear";
+import { templateInstance } from "../instance";
+import { postThumbnailTemplate } from "./thumbnail";
 
 function populateForm(post, form) {
   form.title.value = post.title;
@@ -11,23 +26,23 @@ function populateForm(post, form) {
 }
 
 function populatePreview(post, preview) {
-    const page = postThumbnailTemplate(post, false);
-    clear(preview)
-    preview.append(page);
+  const page = postThumbnailTemplate(post, false);
+  clear(preview);
+  preview.append(page);
 }
 
 export const postFormTemplate = (post) => {
-  const clone = templateInstance('postForm');
-  const form = clone.querySelector('#postForm');
-  const button = clone.querySelector('[data-action=submit]')
-  const preview = clone.querySelector('#postPreview');
+  const clone = templateInstance("postForm");
+  const form = clone.querySelector("#postForm");
+  const button = clone.querySelector("[data-action=submit]");
+  const preview = clone.querySelector("#postPreview");
 
   if (post && post.id) {
-    populateForm(post, form)
-    populatePreview(post, preview)
-    button.querySelector("[data-action=publish]").style.display = "none"
+    populateForm(post, form);
+    populatePreview(post, preview);
+    button.querySelector("[data-action=publish]").style.display = "none";
   } else {
-    button.querySelector("[data-action=update]").style.display = "none"
+    button.querySelector("[data-action=update]").style.display = "none";
   }
 
   form.addEventListener("input", () => {
@@ -35,15 +50,15 @@ export const postFormTemplate = (post) => {
       title: form.title.value,
       body: form.body.value,
       media: form.media.value,
-      tags: form.tags.value.split(", ")
-    }
-    populatePreview(post, preview)
-  })
+      tags: form.tags.value.split(", "),
+    };
+    populatePreview(post, preview);
+  });
 
   form.addEventListener("submit", async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const url = new URL(location.href);
-    const id = url.searchParams.get('postId');
+    const id = url.searchParams.get("postId");
     const form = event.target;
     const data = new FormData(form);
     const title = data.get("title");
@@ -53,13 +68,13 @@ export const postFormTemplate = (post) => {
     let post;
 
     if (!id) {
-      post = await createPost(title, body, media, tags)
+      post = await createPost(title, body, media, tags);
     } else {
-      post = await updatePost(id, title, body, media, tags)
+      post = await updatePost(id, title, body, media, tags);
     }
 
-    location.href = `./?view=post&postId=${post.id}`
-  })
+    location.href = `./?view=post&postId=${post.id}`;
+  });
 
-  return clone
+  return clone;
 };
